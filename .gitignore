@@ -16,6 +16,11 @@ coverage
 
 /cypress/videos/
 /cypress/screenshots/
+/src/stores/proto/app/*ts
+/src/stores/proto/google/protobuf/*ts
+/src/stores/proto/third_party/google/api/*ts
+/src/stores/proto/third_party/validate/*ts
+/src/stores/proto/third_party/protoc-gen-openapiv2/options/*ts
 
 # Editor directories and files
 .vscode/*

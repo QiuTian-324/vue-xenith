@@ -40,8 +40,13 @@ message UserInfo {
   // 发布文章数量
     // @inject_tag: json:"articleTotal"
   int32 article_total = 13;
+  // 关注数量
+  // @inject_tag: json:"followTotal"
+  int32 follow_total = 14;
+  // 粉丝数量
+  // @inject_tag: json:"fansTotal"
+  int32 fans_total = 15;
 }
-
 
 message SignupPhoneExistRequest {
   // @gotags: valid:"phone"
@@ -202,4 +207,29 @@ message UpdateUserPasswordRequest {
   string new_password = 3;
   // @inject_tag: json:"newPasswordConfirm"
   string new_password_confirm = 4;
+}
+
+message FollowingByUserRequest {
+  // @inject_tag: json:"following_id"
+  uint64 following_id = 1; // 被关注者id
+  // @inject_tag: json:"followers_type"
+  bool followers_type =3; // 关注行为类型
+}
+
+message FollowListReply{
+  // inject_tag: json:"id"
+  uint64 id = 1;
+  // inject_tag: json:"username"
+  string username=2;
+}
+
+message FollowingListReply{
+  // inject_tag: json:"id"
+  uint64 id = 1;
+  // inject_tag: json:"username"
+  string username=2;
+}
+
+message FollowersByUserReply {
+  string message = 1;
 }
